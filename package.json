@@ -1,6 +1,6 @@
 {
   "name": "react-paging-indicators",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "description": "Generic React paging indicators that you can use in carousels, rotators, slideshows and more!",
   "repository": "ryanhefner/react-paging-indicators",
