@@ -6,8 +6,13 @@
   "repository": "ryanhefner/react-paging-indicators",
   "author": "Ryan Hefner <hi@ryanhefner.com> (https://www.ryanhefner.com)",
   "files": [
-    "index.js",
+    "BarsIndicator.js",
+    "CustomIndicator.js",
+    "DotsIndicator.js",
     "es",
+    "index.js",
+    "pagingIndicator.js",
+    "src",
     "umd"
   ],
   "directories": {
