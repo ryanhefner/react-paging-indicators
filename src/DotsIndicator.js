@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cleanProps from 'clean-react-props';
-import {CircleIndicator} from 'react-indicators';
+import { CircleIndicator } from 'react-indicators';
 import pagingIndicator from './pagingIndicator';
 
 class DotsIndicator extends Component {
