@@ -1,5 +1,5 @@
-import React, {PureComponent} from 'react';
-import omit from 'lodash.omit';
+import React, { PureComponent } from 'react';
+import omit from 'lomit';
 
 const renderIndicators = function ({
   indicator,
@@ -120,11 +120,10 @@ const pagingIndicator = (IndicatorComponent) => {
             onTimeUpdate: this.onTimerTimeUpdate,
           })
         : null;
-      const pagerProps = omit(this.props, ['index']);
 
       return (
         <IndicatorComponent
-          {...pagerProps}
+          {...omit(this.props, ['index'])}
           {...this.state}
           renderIndicators={
             this.props.hasOwnProperty('renderIndicators')

@@ -255,4 +255,4 @@ class SomethingWithPaging extends Component {
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) © [Ryan Hefner](https://www.ryanhefner.com)
