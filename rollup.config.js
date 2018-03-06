@@ -6,10 +6,22 @@ import uglify from 'rollup-plugin-uglify';
 import pkg from './package.json';
 
 const config = {
-  entry: 'src/index.js',
-  format: 'umd',
-  moduleName: 'react-paging-indicators',
-  exports: 'named',
+  input: 'src/index.js',
+  output: {
+    name: 'react-paging-indicators',
+    exports: 'named',
+    format: 'umd',
+    file: './index.js',
+    globals: {
+      'react': 'React',
+      'react-dom': 'ReactDOM',
+    },
+    banner: `/*! ${pkg.name} v${pkg.version} | (c) ${new Date().getFullYear()} Ryan Hefner | ${pkg.license} License | https://github.com/${pkg.repository} !*/`,
+    footer: '/* follow me on Twitter! @ryanhefner */',
+  },
+  external: [
+    'react',
+  ],
   plugins: [
     babel({
       exclude: 'node_modules/**',
@@ -20,15 +32,6 @@ const config = {
     }),
     json(),
   ],
-  external: [
-    'react',
-  ],
-  globals: {
-    'react': 'React',
-  },
-  dest: './index.js',
-  banner: `/*! ${pkg.name} v${pkg.version} | (c) ${new Date().getFullYear()} Ryan Hefner | ${pkg.license} License | https://github.com/${pkg.repository} !*/`,
-  footer: '/* follow me on Twitter! @ryanhefner */',
 };
 
 if (process.env.NODE_ENV === 'production') {
